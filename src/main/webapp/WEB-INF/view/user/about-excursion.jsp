@@ -64,7 +64,7 @@
                 </c:forEach>
             </a></p>
         </section>
-        <section style="border: 1px solid;border-radius: 6px;padding: 6px; margin-bottom: 20%">
+        <section style="border: 1px solid;border-radius: 6px;padding: 6px;">
             <form:form action="saveUser" modelAttribute="user">
                 <form:hidden path="user_id"/>
                 <form:hidden path="excursion.id_excursion" value="${excursion.id_excursion}"/>

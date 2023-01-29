@@ -27,8 +27,8 @@
         <li><a href="#foot">Контакти</a></li>
     </ul>
 </header>
-<div style="height: 100%">
-    <div class="flex_container main">
+<div style="height: 200%" class="main">
+    <div class="flex_container">
         <c:forEach var="hall" items="${hallList}">
             <article>
                 <section>

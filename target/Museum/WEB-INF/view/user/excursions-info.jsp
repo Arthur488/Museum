@@ -23,15 +23,15 @@
   <ul class="menu">
     <li><img src="<c:url value="/resources/css/museum.png"/>" alt="Travel bus" class="logo"></li>
     <c:url var="main" value="/user/"/>
-    <li><a href="${main}">Main page</a></li>
+    <li><a href="${main}">Головна сторінка</a></li>
     <c:url var="museums" value="/user/allMuseums"/>
-    <li><a href="${museums}">Museums</a></li>
-    <li><a href="#">Excursions</a></li>
+    <li><a href="${museums}">Музеї</a></li>
+    <li><a href="#">Екскурсії</a></li>
     <c:url var="showHallsButton" value="/user/showHalls">
       <c:param name="museumId" value="${museum_Id}"/>
     </c:url>
-    <li><a href="${showHallsButton}">Halls</a></li>
-    <li><a href="#foot">Contacts</a></li>
+    <li><a href="${showHallsButton}">Зали</a></li>
+    <li><a href="#foot">Контакти</a></li>
   </ul>
 </header>
 
@@ -41,20 +41,20 @@
       <section>
         <header>${excursion.excursion_name}</header>
         <hr>
-        <p>Date: <strong>${excursion.excursion_date}</strong></p>
-        <p>Time: <strong>${excursion.excursion_start_time}</strong> - <strong>${excursion.excursion_end_time}</strong></p>
-        <p>Price: <strong>${excursion.excursion_price}</strong> UAN</p>
+        <p>Дата: <strong>${excursion.excursion_date}</strong></p>
+        <p>Час: <strong>${excursion.excursion_start_time}</strong> - <strong>${excursion.excursion_end_time}</strong></p>
+        <p>Ціна: <strong>${excursion.excursion_price}</strong> грн</p>
       </section>
       <c:url var="aboutExcursion" value="aboutExcursion">
         <c:param name="excursionId" value="${excursion.id_excursion}"/>
       </c:url>
-      <input type="button" class="button" value="Read more ..." onclick="window.location.href='${aboutExcursion}'">
+      <input type="button" class="button" value="Дізнатися більше ..." onclick="window.location.href='${aboutExcursion}'">
     </article>
   </c:forEach>
 </div>
 
 <footer id="foot">
-  <h3>Connect with us</h3>
+  <h3>Зв'яжіться з нами</h3>
   <span><a href="#"><img src="<c:url value="/resources/css/facebook.png"/>" alt="facebook"></a></span>
   <span><a href="#"><img src="<c:url value="/resources/css/twitter.png"/>" alt="twitter"></a></span>
   <span><a href="#"><img src="<c:url value="/resources/css/instagram.png"/>" alt="instagram"></a></span>
@@ -63,10 +63,10 @@
   <p>+380294235479</p>
   <hr>
   <div class="footer_menu">
-    <a href="#">About us</a>
-    <a href="#">Museums map</a>
-    <a href="<c:url value="/admin/"/>">Administrator</a>
-    <a href="#">Privacy police</a>
+    <a href="#">Про нас</a>
+    <a href="#">Карта музеїв</a>
+    <a href="<c:url value="/admin/"/>">Адміністратор</a>
+    <a href="#">Політика конфіденційності</a>
     <a href="#">Coockies</a>
     <span>@2023</span>
   </div>

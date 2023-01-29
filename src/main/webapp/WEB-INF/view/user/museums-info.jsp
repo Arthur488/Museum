@@ -22,34 +22,36 @@
     </ul>
 </header>
 
-<div class="flex_container">
-    <c:forEach var="museum" items="${allMuseums}">
-        <c:url var="updateButton" value="#">
-            <c:param name="#" value="#" />
-        </c:url>
-        <div>
-            <article>
-                <c:if test="${museum.base64Image.length()>0}">
-                    <img src="<c:url value='/resources/img/${museum.base64Image}'/>" alt="Error">
-                </c:if>
-                <c:if test="${museum.base64Image.length()==null}">
-                    <input type="text" value="No picture" readonly="readonly"/>
-                </c:if>
-                <section>
-                    <header>${museum.museum_name}</header>
-                    <hr>
-                    <p>Години роботи музею:</p>
-                    <p>з <strong>${museum.museum_openTime}</strong> до <strong>${museum.museum_closeTime}</strong></p>
-                    <hr>
-                    <p>Місцезнаходження: <strong>${museum.museum_City}</strong></p>
-                </section>
-                <c:url var="showExcursionsButton" value="showExcursions">
-                    <c:param name="museumId" value="${museum.museum_id}"/>
-                </c:url>
-                <a href="${showExcursionsButton}" class="button" style="text-decoration: none;text-align: center;">Доступні екскурсії</a>
-            </article>
-        </div>
-    </c:forEach>
+<div style="height: 100%">
+    <div class="flex_container">
+        <c:forEach var="museum" items="${allMuseums}">
+            <c:url var="updateButton" value="#">
+                <c:param name="#" value="#" />
+            </c:url>
+            <div>
+                <article>
+                    <c:if test="${museum.base64Image.length()>0}">
+                        <img src="<c:url value='/resources/img/${museum.base64Image}'/>" alt="Error">
+                    </c:if>
+                    <c:if test="${museum.base64Image.length()==null}">
+                        <input type="text" value="No picture" readonly="readonly"/>
+                    </c:if>
+                    <section>
+                        <header>${museum.museum_name}</header>
+                        <hr>
+                        <p>Години роботи музею:</p>
+                        <p>з <strong>${museum.museum_openTime}</strong> до <strong>${museum.museum_closeTime}</strong></p>
+                        <hr>
+                        <p>Місцезнаходження: <strong>${museum.museum_City}</strong></p>
+                    </section>
+                    <c:url var="showExcursionsButton" value="showExcursions">
+                        <c:param name="museumId" value="${museum.museum_id}"/>
+                    </c:url>
+                    <a href="${showExcursionsButton}" class="button" style="text-decoration: none;text-align: center;">Доступні екскурсії</a>
+                </article>
+            </div>
+        </c:forEach>
+    </div>
 </div>
 
 <footer id="foot">
