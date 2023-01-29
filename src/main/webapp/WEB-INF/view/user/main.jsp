@@ -12,8 +12,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">
   <link rel="stylesheet" href="<c:url value="/resources/css/main_style.css"/>">
+  <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">
   <link rel="shortcut icon" href="<c:url value="/resources/css/museum.png"/>" type="image/x-icon">
   <title>Museums. Main page</title>
   <script>${message}</script>
@@ -24,29 +24,29 @@
   <ul class="menu">
     <li><img src="<c:url value="/resources/css/museum.png"/>" alt="Travel bus" class="logo"></li>
     <c:url var="allMuseums" value="allMuseums"/>
-    <li><a href="#">Main page</a></li>
-    <li><a href="${allMuseums}">Museums</a></li>
-    <li><a href="#foot">Contacts</a></li>
+    <li><a href="#">Головна сторінка</a></li>
+    <li><a href="${allMuseums}">Музеї</a></li>
+    <li><a href="#foot">Контакти</a></li>
   </ul>
 </header>
 
 <div class="flex_container main">
   <article class="flex">
     <section>
-      <header>Welcome to the world of museums</header>
-      <p>This platform is designed to facilitate the search and purchase of tickets for most museums. Our site
-        cooperates with more than 100 museums and galleries of the world.</p>
-      <p>This will help you quickly and without
-        problems to plan your weekend with profit. Immerse
-        yourself in the world of culture and history with us.</p>
+      <header>Ласкаво просимо у світ музеїв</header>
+      <p>Ця платформа призначена для полегшення пошуку та купівлі квитків у більшість музеїв. Наш сайт
+        співпрацює з понад 100 музеями та галереями світу.</p>
+      <p>Це допоможе вам швидко і без
+        проблеми спланувати свої вихідні з прибутком. Занурити
+        себе у світі культури та історії разом з нами.</p>
     </section>
     <img src="<c:url value="/resources/css/NationalArtMuseumOfUkraine.png"/>" alt="NationalArtMuseumOfUkraine">
-    <input type="button" class="button" value="Choose museum" onclick="window.location.href='${allMuseums}'">
+    <input type="button" class="button" value="Вибрати музей" onclick="window.location.href='${allMuseums}'">
   </article>
 </div>
 
 <footer id="foot">
-  <h3>Connect with us</h3>
+  <h3>Зв'яжіться з нами</h3>
   <span><a href="#"><img src="<c:url value="/resources/css/facebook.png"/>" alt="facebook"></a></span>
   <span><a href="#"><img src="<c:url value="/resources/css/twitter.png"/>" alt="twitter"></a></span>
   <span><a href="#"><img src="<c:url value="/resources/css/instagram.png"/>" alt="instagram"></a></span>
@@ -55,10 +55,10 @@
   <p>+380294235479</p>
   <hr>
   <div class="footer_menu">
-    <a href="#">About us</a>
-    <a href="#">Museums map</a>
-    <a href="<c:url value="/admin/"/>">Administrator</a>
-    <a href="#">Privacy police</a>
+    <a href="#">Про нас</a>
+    <a href="#">Карта музеїв</a>
+    <a href="<c:url value="/admin/"/>">Адміністратор</a>
+    <a href="#">Політика конфіденційності</a>
     <a href="#">Coockies</a>
     <span>@2023</span>
   </div>
