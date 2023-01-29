@@ -1,7 +1,6 @@
 package spring.mvc_hibernate_aop.controller.admin;
 
 import jakarta.servlet.http.HttpServlet;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -89,6 +88,12 @@ public class AdminExcursionController extends HttpServlet {
         List <Guide> guideList = guideService.getAllGuidesFromThisMuseum(mus_id);
         model.addAttribute("excursion", excursion).addAttribute("fullHallsListInMuseum", MuseumFullhallList).addAttribute("fullGuideList", guideList);
         return "admin/admin-excursion/excursion-add-update";
+    }
+
+    @RequestMapping("/deleteExcursion")
+    public String deleteHall(@RequestParam("museumId") int id_mus, @RequestParam("excursionId") int excursion_id) {
+        excursionService.deleteExcursion(excursion_id);
+        return "redirect:/admin/showExcursions?museumId=" + id_mus;
     }
 
 

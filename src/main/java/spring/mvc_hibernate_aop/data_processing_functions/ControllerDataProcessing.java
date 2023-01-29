@@ -65,6 +65,7 @@ public class ControllerDataProcessing {
         List <Hall> oldHallList = hallService.getAllHallsWithThisExcursionID(excursion.getId_excursion());
         //Получаем hallList в виде строки. Парсим строку, получаем айдишники залов и находим их. Затем создаем массив из этих же ID
         String stringOfChosenHalls = (String) bindingResult.getFieldValue("hallList");
+
         Pattern pattern = Pattern.compile(("(ID=)(\\d+)"));
         assert stringOfChosenHalls != null;
         Matcher matcher = pattern.matcher(stringOfChosenHalls);

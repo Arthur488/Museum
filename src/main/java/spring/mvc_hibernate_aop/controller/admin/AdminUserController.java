@@ -71,4 +71,10 @@ public class AdminUserController {
         return "redirect:/admin/showUsers?excursionId=" + excursionId;
     }
 
+    @RequestMapping("/deleteUser")
+    public String deleteHall(@RequestParam("excursionId") int excursion_ID, @RequestParam("userId") int user_id) {
+        userService.deleteUser(user_id);
+        return "redirect:/admin/showUsers?excursionId=" + excursion_ID;
+    }
+
 }

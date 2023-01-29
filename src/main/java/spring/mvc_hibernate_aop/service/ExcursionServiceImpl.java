@@ -57,4 +57,10 @@ public class ExcursionServiceImpl implements ExcursionService {
     public void saveExcursion(Excursion excursion) {
         excursionDAO.saveExcursion(excursion);
     }
+
+    @Override
+    @Transactional
+    public void deleteExcursion(int excursionId) {
+        excursionDAO.deleteExcursion(excursionId);
+    }
 }

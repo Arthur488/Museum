@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import spring.mvc_hibernate_aop.data_processing_functions.ControllerDataProcessing;
 import spring.mvc_hibernate_aop.entity.Excursion;
 import spring.mvc_hibernate_aop.entity.Hall;
+import spring.mvc_hibernate_aop.entity.Museum;
 import spring.mvc_hibernate_aop.service.GuideService;
 import spring.mvc_hibernate_aop.service.HallService;
 import spring.mvc_hibernate_aop.service.MuseumService;
@@ -65,5 +66,12 @@ public class ExcursionDAOImpl implements ExcursionDAO {
         ControllerDataProcessing controllerDataProcessing = new ControllerDataProcessing();
         Excursion excursion1 = controllerDataProcessing.processHallIdsFromCheckboxesAndSaveHallsToExcursion(bindingResult, excursion, hallService, museumService, guideService);
         session.merge("Excursion", excursion1);
+    }
+
+    @Override
+    public void deleteExcursion(int excursionId) {
+        Session session = sessionFactory.getCurrentSession();
+        Query <Excursion> query = session.createQuery("delete from Excursion where id_excursion =: excursion_ID");
+        query.setParameter("excursion_ID", excursionId).executeUpdate();
     }
 }

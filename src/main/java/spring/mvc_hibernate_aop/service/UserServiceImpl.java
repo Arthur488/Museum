@@ -14,7 +14,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAO userDAO;
 
-
     @Override
     @Transactional
     public List <User> getAllUsersFromThisExcursion(int excursionId) {
@@ -31,5 +30,11 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public User findUser(int userId) {
         return userDAO.findUser(userId);
+    }
+
+    @Override
+    @Transactional
+    public void deleteUser(int userId) {
+        userDAO.deleteUser(userId);
     }
 }

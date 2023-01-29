@@ -21,4 +21,5 @@ public interface ExcursionService {
 
     public void saveExcursion(Excursion excursion);
 
+    public void deleteExcursion(int excursionId);
 }

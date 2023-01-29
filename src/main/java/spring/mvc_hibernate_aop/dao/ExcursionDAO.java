@@ -23,4 +23,7 @@ public interface ExcursionDAO {
     public Excursion getExcursionById(int id);
 
     public void SaveHallsAndMuseumAndGuideToExcursion(BindingResult bindingResult, Excursion excursion, HallService hallService, MuseumService museumService, GuideService guideService);
+
+    public void deleteExcursion(int excursionId);
+    
 }

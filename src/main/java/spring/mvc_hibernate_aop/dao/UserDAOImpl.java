@@ -2,8 +2,10 @@ package spring.mvc_hibernate_aop.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import spring.mvc_hibernate_aop.entity.Museum;
 import spring.mvc_hibernate_aop.entity.User;
 
 import java.util.List;
@@ -30,5 +32,12 @@ public class UserDAOImpl implements UserDAO {
     public User findUser(int userId) {
         Session session = sessionFactory.getCurrentSession();
         return session.find(User.class, userId);
+    }
+
+    @Override
+    public void deleteUser(int userId) {
+        Session session = sessionFactory.getCurrentSession();
+        Query <User> query = session.createQuery("delete from User where user_id =: user_ID");
+        query.setParameter("user_ID", userId).executeUpdate();
     }
 }

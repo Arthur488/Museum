@@ -33,7 +33,11 @@
                 <form:input readonly="true" path="hall_number_of_showpieces"/>
             </td>
             <td>
-                <form:input path="hall_access"/>
+                <form:select path="hall_access">
+                    <form:option value="1">Є доступ</form:option>
+                    <form:option value="0">Немає доступу</form:option>
+
+                </form:select>
             </td>
 
             <td>

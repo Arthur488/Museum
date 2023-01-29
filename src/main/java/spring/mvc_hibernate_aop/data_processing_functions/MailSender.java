@@ -14,9 +14,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class MailSender {
-//    public static void main(String[] args) {
-//        sendEmail();
-//    }
+
 
     public static void sendEmail(User user, Excursion excursion) {
         // Куда отправляем

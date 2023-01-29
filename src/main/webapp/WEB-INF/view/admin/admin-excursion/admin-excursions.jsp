@@ -46,10 +46,10 @@
             <c:param name="excursionId" value="${excursion.id_excursion}"/>
         </c:url>
 
-        <%--        <c:url var="deleteHallButton" value="deleteHall">--%>
-        <%--            <c:param name="hallId" value="${hall.hall_id}"/>--%>
-        <%--            <c:param name="hMuseumId" value="${museumID}"/>--%>
-        <%--        </c:url>--%>
+        <c:url var="deleteExcursionButton" value="deleteExcursion">
+            <c:param name="museumId" value="${excursion.museum.museum_id}"/>
+            <c:param name="excursionId" value="${excursion.id_excursion}"/>
+        </c:url>
 
         <tr>
             <td>${excursion.excursion_name}</td>
@@ -61,7 +61,7 @@
             <td>${excursion.excursion_price}</td>
             <td>
                 <input type="button" value="Змінити дані" onclick="window.location.href='${updateExcursionButton}'">
-                <input type="button" value="Видалити дані" onclick="window.location.href='#'">
+                <input type="button" value="Видалити дані" onclick="window.location.href='${deleteExcursionButton}'">
             </td>
             <td>
                 <input type="button" value="Екскурсовод" onclick="window.location.href='${showGuideButton}'">

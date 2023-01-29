@@ -33,10 +33,10 @@
             <c:param name="userId" value="${user.user_id}"/>
             <c:param name="excursionId" value="${excursionID}"/>
         </c:url>
-        <%--        <c:url var="deleteShowpieceButton" value="deleteShowpiece">--%>
-        <%--            <c:param name="showpieceId" value="${showpiece.showpiece_id}"/>--%>
-        <%--            <c:param name="hallId" value="${hallsID}"/>--%>
-        <%--        </c:url>--%>
+        <c:url var="deleteUserButton" value="deleteUser">
+            <c:param name="userId" value="${user.user_id}"/>
+            <c:param name="excursionId" value="${excursionID}"/>
+        </c:url>
 
         <tr>
             <td>${user.user_full_name}</td>
@@ -45,8 +45,9 @@
             <td>${user.user_email}</td>
             <td>
                 <input type="button" value="Змінити дані" onclick="window.location.href='${updateUserButton}'">
-                <input type="button" value="Видалити дані" onclick="window.location.href='#'">
-                <input type="button" value="Відправити повторне запрошення" onclick="window.location.href='${SendMailButton}'">
+                <input type="button" value="Видалити дані" onclick="window.location.href='${deleteUserButton}'">
+                <input type="button" value="Відправити повторне запрошення"
+                       onclick="window.location.href='${SendMailButton}'">
             </td>
         </tr>
 
