@@ -4,8 +4,8 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" />
-          <unit-entry name="sessionFactory" value="eb2878a9-9daf-4b6d-b196-f60291fac03d" />
+          <unit-entry name="hibernate.cfg.xml" value="586c559d-c035-4854-9bea-bd8ba8bd6e53" />
+          <unit-entry name="sessionFactory" value="2d2a953d-4473-4b16-8b90-de16dac8b6d6" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
